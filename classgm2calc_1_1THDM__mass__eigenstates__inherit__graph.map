@@ -1,0 +1,5 @@
+<map id="gm2calc::THDM_mass_eigenstates" name="gm2calc::THDM_mass_eigenstates">
+<area shape="rect" id="node1" title="model class with routines for determing masses and mixinga and EWSB" alt="" coords="5,424,227,824"/>
+<area shape="rect" id="node3" href="$classgm2calc_1_1THDM.html" title="Contains routines to determine the THDM parameters." alt="" coords="53,872,179,1096"/>
+<area shape="rect" id="node2" href="$classgm2calc_1_1THDM__parameters.html" title="Contains the parameters of the THDM model." alt="" coords="13,5,219,376"/>
+</map>

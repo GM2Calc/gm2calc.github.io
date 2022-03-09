@@ -1,0 +1,8 @@
+<map id="gm2calc::Error" name="gm2calc::Error">
+<area shape="rect" id="node1" title=" " alt="" coords="345,131,461,223"/>
+<area shape="rect" id="node3" href="$classgm2calc_1_1EInvalidInput.html" title=" " alt="" coords="5,271,176,363"/>
+<area shape="rect" id="node4" href="$classgm2calc_1_1EPhysicalProblem.html" title=" " alt="" coords="201,271,402,363"/>
+<area shape="rect" id="node5" href="$classgm2calc_1_1EReadError.html" title=" " alt="" coords="427,271,584,363"/>
+<area shape="rect" id="node6" href="$classgm2calc_1_1ESetupError.html" title="Spectrum generator was not setup correctly." alt="" coords="609,271,770,363"/>
+<area shape="rect" id="node2" title=" " alt="" coords="333,5,472,83"/>
+</map>
