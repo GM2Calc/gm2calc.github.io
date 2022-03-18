@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GM2Calc
-   &#160;<span id="projectnumber">2.0.0</span>
+   &#160;<span id="projectnumber">2.1.0</span>
    </div>
   </td>
  </tr>
@@ -140,66 +140,66 @@ $(function() {
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(1 - u - <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>) - 4*u*<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>;</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;   }</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">   /// clausen_2(2*acos(x))</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> cl2acos(<span class="keywordtype">double</span> x) noexcept {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespacegm2calc.html#a0c11082ae511cbd6235486affcd12ce0">clausen_2</a>(2*std::acos(x));</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;   }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="comment">   /// u &lt; 1 &amp;&amp; v &lt; 1, lambda^2(u,v) &gt; 0; note: phi_pos(u,v) = phi_pos(v,u)</span></div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> phi_pos(<span class="keywordtype">double</span> u, <span class="keywordtype">double</span> <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>) noexcept</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;   {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 1.0e-7;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(u, 1.0, eps) &amp;&amp; <a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>, 1.0, eps)) {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;         <span class="keywordflow">return</span> 2.343907238689459;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">double</span> pi23 = 3.2898681336964529; <span class="comment">// Pi^2/3</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a> = std::sqrt(lambda_2(u,<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>));</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(u, <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>, eps)) {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;         <span class="keywordflow">return</span> (- <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(<a class="code" href="namespacegm2calc.html#af3947969114b65767d43f0db5e976eb1">std::log</a>(u))</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                 + 2*<a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(<a class="code" href="namespacegm2calc.html#af3947969114b65767d43f0db5e976eb1">std::log</a>(0.5*(1 - <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>)))</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                 - 4*<a class="code" href="namespacegm2calc.html#aefe0cc16ae2ff87eb92ff2201f2a17a4">dilog</a>(0.5*(1 - <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>))</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                 + pi23)/<a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      <span class="keywordflow">return</span> (- <a class="code" href="namespacegm2calc.html#af3947969114b65767d43f0db5e976eb1">std::log</a>(u)*<a class="code" href="namespacegm2calc.html#af3947969114b65767d43f0db5e976eb1">std::log</a>(<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;              + 2*<a class="code" href="namespacegm2calc.html#af3947969114b65767d43f0db5e976eb1">std::log</a>(0.5*(1 - <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a> + u - <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>))*<a class="code" href="namespacegm2calc.html#af3947969114b65767d43f0db5e976eb1">std::log</a>(0.5*(1 - <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a> - u + <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>))</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;              - 2*<a class="code" href="namespacegm2calc.html#aefe0cc16ae2ff87eb92ff2201f2a17a4">dilog</a>(0.5*(1 - <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a> + u - <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>))</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;              - 2*<a class="code" href="namespacegm2calc.html#aefe0cc16ae2ff87eb92ff2201f2a17a4">dilog</a>(0.5*(1 - <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a> - u + <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>))</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;              + pi23)/<a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;   }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">   /// lambda^2(u,v) &lt; 0, u = 1</span></div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> phi_neg_1v(<span class="keywordtype">double</span> <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>) noexcept</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;   {</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keywordflow">return</span> 2*(cl2acos(1 - 0.5*<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>) + 2*cl2acos(0.5*std::sqrt(<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>)));</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;   }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment">   /// lambda^2(u,v) &lt; 0; note: phi_neg(u,v) = phi_neg(v,u)</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> phi_neg(<span class="keywordtype">double</span> u, <span class="keywordtype">double</span> <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>) noexcept</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;   {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 1.0e-7;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(u, 1.0, eps) &amp;&amp; <a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>, 1.0, eps)) {</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;         <span class="comment">// -I/9 (Pi^2 - 36 PolyLog[2, (1 - I Sqrt[3])/2])/Sqrt[3]</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;         <span class="keywordflow">return</span> 2.343907238689459;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a> = std::sqrt(-lambda_2(u,<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>));</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(u, 1.0, eps)) {</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;         <span class="keywordflow">return</span> phi_neg_1v(<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>)/<a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>, 1.0, eps)) {</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;         <span class="keywordflow">return</span> phi_neg_1v(u)/<a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;      }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(u, <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>, eps)) {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;         <span class="keywordflow">return</span> 2*(2*cl2acos(0.5/std::sqrt(u))</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                   + cl2acos(1 - 0.5/u))/<a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="comment">   /// u &lt; 1 &amp;&amp; v &lt; 1, lambda^2(u,v) &gt; 0; note: phi_pos(u,v) = phi_pos(v,u)</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> phi_pos(<span class="keywordtype">double</span> u, <span class="keywordtype">double</span> <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>) noexcept</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;   {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 1.0e-7;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(u, 1.0, eps) &amp;&amp; <a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>, 1.0, eps)) {</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;         <span class="keywordflow">return</span> 2.343907238689459;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">double</span> pi23 = 3.2898681336964529; <span class="comment">// Pi^2/3</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a> = std::sqrt(lambda_2(u,<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>));</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(u, <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>, eps)) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;         <span class="keywordflow">return</span> (- <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(<a class="code" href="namespacegm2calc.html#af3947969114b65767d43f0db5e976eb1">std::log</a>(u))</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                 + 2*<a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(<a class="code" href="namespacegm2calc.html#af3947969114b65767d43f0db5e976eb1">std::log</a>(0.5*(1 - <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>)))</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                 - 4*<a class="code" href="namespacegm2calc.html#aefe0cc16ae2ff87eb92ff2201f2a17a4">dilog</a>(0.5*(1 - <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>))</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                 + pi23)/<a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">return</span> (- <a class="code" href="namespacegm2calc.html#af3947969114b65767d43f0db5e976eb1">std::log</a>(u)*<a class="code" href="namespacegm2calc.html#af3947969114b65767d43f0db5e976eb1">std::log</a>(<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;              + 2*<a class="code" href="namespacegm2calc.html#af3947969114b65767d43f0db5e976eb1">std::log</a>(0.5*(1 - <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a> + u - <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>))*<a class="code" href="namespacegm2calc.html#af3947969114b65767d43f0db5e976eb1">std::log</a>(0.5*(1 - <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a> - u + <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>))</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;              - 2*<a class="code" href="namespacegm2calc.html#aefe0cc16ae2ff87eb92ff2201f2a17a4">dilog</a>(0.5*(1 - <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a> + u - <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>))</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;              - 2*<a class="code" href="namespacegm2calc.html#aefe0cc16ae2ff87eb92ff2201f2a17a4">dilog</a>(0.5*(1 - <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a> - u + <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>))</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;              + pi23)/<a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;   }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="comment">   /// clausen_2(2*acos(x))</span></div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> cl2acos(<span class="keywordtype">double</span> x) noexcept</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;   {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="namespacegm2calc.html#a0c11082ae511cbd6235486affcd12ce0">clausen_2</a>(2*std::acos(x));</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;   }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">   /// lambda^2(u,v) &lt; 0, u = 1</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> phi_neg_1v(<span class="keywordtype">double</span> <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>) noexcept</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;   {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordflow">return</span> 2*(cl2acos(1 - 0.5*<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>) + 2*cl2acos(0.5*std::sqrt(<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>)));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;   }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="comment">   /// lambda^2(u,v) &lt; 0; note: phi_neg(u,v) = phi_neg(v,u)</span></div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;<span class="comment"></span>   <span class="keywordtype">double</span> phi_neg(<span class="keywordtype">double</span> u, <span class="keywordtype">double</span> <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>) noexcept</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;   {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 1.0e-7;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(u, 1.0, eps) &amp;&amp; <a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>, 1.0, eps)) {</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;         <span class="comment">// -I/9 (Pi^2 - 36 PolyLog[2, (1 - I Sqrt[3])/2])/Sqrt[3]</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;         <span class="keywordflow">return</span> 2.343907238689459;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      }</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> <a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a> = std::sqrt(-lambda_2(u,<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>));</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(u, <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>, eps)) {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;         <span class="keywordflow">return</span> 4*<a class="code" href="namespacegm2calc.html#a0c11082ae511cbd6235486affcd12ce0">clausen_2</a>(2*std::asin(std::sqrt(0.25/u)))/<a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      }</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(u, 1.0, eps)) {</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;         <span class="keywordflow">return</span> phi_neg_1v(<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>)/<a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;      }</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160; </div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="namespacegm2calc.html#ad7e71410995ca3f4525b93f139952e6c">is_equal</a>(<a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>, 1.0, eps)) {</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;         <span class="keywordflow">return</span> phi_neg_1v(u)/<a class="code" href="gm2__slha__io_8cpp.html#a3db359547eed8cfd48ca821d95f577af">lambda</a>;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      }</div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      <span class="keyword">const</span> <span class="keyword">auto</span> sqrtu = std::sqrt(u);</div>
@@ -827,7 +827,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 8 2022 18:50:49 for GM2Calc by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Mar 18 2022 23:11:26 for GM2Calc by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>

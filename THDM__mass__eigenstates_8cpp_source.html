@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">GM2Calc
-   &#160;<span id="projectnumber">2.0.0</span>
+   &#160;<span id="projectnumber">2.1.0</span>
    </div>
   </td>
  </tr>
@@ -494,107 +494,108 @@ $(function() {
 <div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00423"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#aa36697f5e76a99636e984461e7fa5974">  423</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_alpha_h()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;   <span class="keywordtype">double</span> alpha_h = std::atan2(ZH(1,1), ZH(0,1));</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> bma = get_beta() - alpha_h;</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 10*std::numeric_limits&lt;double&gt;::epsilon();</div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160; </div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;   <span class="keywordflow">if</span> (bma &lt; -pi/2 - eps) { alpha_h -= pi; }</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;   <span class="keywordflow">if</span> (bma &gt;  pi/2 + eps) { alpha_h += pi; }</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160; </div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;   <span class="keywordflow">return</span> alpha_h;</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;}</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160; </div>
-<div class="line"><a name="l00435"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#a458a0739c5b9ba0397d138b14a7a9a72">  435</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_sin_beta_minus_alpha()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;   <span class="keywordflow">return</span> std::sin(get_beta() - get_alpha_h());</div>
-<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;}</div>
-<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160; </div>
-<div class="line"><a name="l00440"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#a6ab99c4df4cfd30eff6278d17c79ceeb">  440</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_cos_beta_minus_alpha()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;   <span class="keywordflow">return</span> std::cos(get_beta() - get_alpha_h());</div>
-<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;}</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160; </div>
-<div class="line"><a name="l00445"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#abecc3ea12a5c7ca976242f32f97ca6ba">  445</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_alpha_em()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> gY = g1*gut_normalization;</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> e2 = <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(gY)*<a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(g2)/(<a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(gY) + <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(g2));</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;   <span class="keywordflow">return</span> e2/12.566370614359173; <span class="comment">// e^2/(4 Pi)</span></div>
-<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;}</div>
-<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="comment"> * Returns the CP-even Higgs mixing angle contribution \f$\eta\f$ that</span></div>
-<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="comment"> * describes the deviation from the SM limit.</span></div>
-<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="comment"> * The \f$\eta\f$ parameter is defined as</span></div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="comment"> * \f$\beta - \alpha = \pi/2 - \eta\f$.</span></div>
-<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="comment"> *</span></div>
-<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="comment"> * @return \f$\eta\f$</span></div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00461"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#ae5ecc227dbf7cc3d08b44c88e4c8d177">  461</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_eta()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;   <span class="keywordflow">return</span> pi/2 + get_alpha_h() - get_beta();</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;}</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="comment"> * Returns \f$\Lambda_5\f$, Eq (14) arxiv:1607.06292</span></div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="comment"> * @return \f$\Lambda_5\f$</span></div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00470"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#a2542e63e94727a208198142b200cef80">  470</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_LambdaFive()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> tb = get_tan_beta();</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> sbcb = tb/(1.0 + <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(tb)); <span class="comment">// Sin[beta] Cos[beta]</span></div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;   <span class="keywordflow">return</span> 2*get_m122()/(get_v_sqr() * sbcb);</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;}</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;<span class="comment"></span> </div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="comment">/**</span></div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="comment"> * Returns \f$\left(\Lambda_{567} - \Lambda_{5}\right)\left(\tan\beta - \frac{1}{\tan\beta}\right) = \frac{\lambda_6}{\sin^2\beta} - \frac{\lambda_7}{\cos^2\beta}\f$</span></div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00480"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#ade0fc2a2612bf850ca804040aae28e66">  480</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_LambdaSixSeven()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> sb = get_sin_beta();</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> cb = get_cos_beta();</div>
-<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;   <span class="keywordflow">return</span> lambda6/<a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(sb) - lambda7/<a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(cb);</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;}</div>
-<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160; </div>
-<div class="line"><a name="l00487"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#a38814401a67cb2c1f160f5aeb0d7382f">  487</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::ThetaW()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;   <span class="keywordflow">return</span> std::atan(gut_normalization*g1/g2);</div>
-<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;}</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160; </div>
-<div class="line"><a name="l00492"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#aea8cb5ec9d0f81e671d760106735c1a4">  492</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_v()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;   <span class="keywordflow">return</span> std::sqrt(get_v_sqr());</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;}</div>
-<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160; </div>
-<div class="line"><a name="l00497"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#aa57756361a4e25351f83e5cbc151077a">  497</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_v_sqr()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;<span class="keyword"></span>{</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(v1) + <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(v2);</div>
-<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;}</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160; </div>
-<div class="line"><a name="l00502"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#ace2149b0c683994a95be6daacab3b01c">  502</a></span>&#160;<span class="keywordtype">void</span> CLASSNAME::set_alpha_em_and_cw(<span class="keywordtype">double</span> alpha_em, <span class="keywordtype">double</span> cw)</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;{</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> e = std::sqrt(alpha_em*4*pi);</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> sw = std::sqrt(1 - <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(cw));</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;   g1 = e/(cw*gut_normalization);</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;   g2 = e/sw;</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;}</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160; </div>
-<div class="line"><a name="l00510"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#adf2cd22d406e36101ec8008cd9c488fd">  510</a></span>&#160;<span class="keywordtype">void</span> CLASSNAME::set_tan_beta_and_v(<span class="keywordtype">double</span> tan_beta, <span class="keywordtype">double</span> <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>)</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;{</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> sq = std::sqrt(1.0 + <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(tan_beta));</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> sb = tan_beta/sq;</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> cb = 1/sq;</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;   v1 = <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>*cb;</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;   v2 = <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>*sb;</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;}</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160; </div>
-<div class="line"><a name="l00519"></a><span class="lineno"><a class="line" href="namespacegm2calc.html#a760856ffaaf7fc7f2f080984ee71f0f6">  519</a></span>&#160;std::ostream&amp; <a class="code" href="namespacegm2calc.html#a8342a1b17519dbce763b063b20bb9b6c">operator&lt;&lt;</a>(std::ostream&amp; ostr, <span class="keyword">const</span> <a class="code" href="THDM__mass__eigenstates_8cpp.html#a36470daa77917be305561b8ff59f571a">CLASSNAME</a>&amp; model)</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;{</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;   model.print(ostr);</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;   <span class="keywordflow">return</span> ostr;</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;}</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160; </div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;} <span class="comment">// namespace gm2calc</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;   <span class="keywordtype">double</span> alpha_h = std::asin(ZH(1,1));</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> bma = get_beta() - alpha_h;</div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> eps = 10*std::numeric_limits&lt;double&gt;::epsilon();</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;   <span class="keywordflow">if</span> (bma &lt; -pi/2 - eps) { alpha_h -= pi; }</div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;   <span class="keywordflow">if</span> (bma &gt;  pi/2 + eps) { alpha_h += pi; }</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160; </div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;   <span class="keywordflow">return</span> alpha_h;</div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;}</div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160; </div>
+<div class="line"><a name="l00436"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#a458a0739c5b9ba0397d138b14a7a9a72">  436</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_sin_beta_minus_alpha()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160;   <span class="keywordflow">return</span> std::sin(get_beta() - get_alpha_h());</div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;}</div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160; </div>
+<div class="line"><a name="l00441"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#a6ab99c4df4cfd30eff6278d17c79ceeb">  441</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_cos_beta_minus_alpha()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;   <span class="keywordflow">return</span> std::cos(get_beta() - get_alpha_h());</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;}</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160; </div>
+<div class="line"><a name="l00446"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#abecc3ea12a5c7ca976242f32f97ca6ba">  446</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_alpha_em()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> gY = g1*gut_normalization;</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> e2 = <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(gY)*<a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(g2)/(<a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(gY) + <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(g2));</div>
+<div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;   <span class="keywordflow">return</span> e2/12.566370614359173; <span class="comment">// e^2/(4 Pi)</span></div>
+<div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;}</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;<span class="comment"> * Returns the CP-even Higgs mixing angle contribution \f$\eta\f$ that</span></div>
+<div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;<span class="comment"> * describes the deviation from the SM limit.</span></div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;<span class="comment"> * The \f$\eta\f$ parameter is defined as</span></div>
+<div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;<span class="comment"> * \f$\beta - \alpha = \pi/2 - \eta\f$.</span></div>
+<div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;<span class="comment"> *</span></div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;<span class="comment"> * @return \f$\eta\f$</span></div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00462"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#ae5ecc227dbf7cc3d08b44c88e4c8d177">  462</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_eta()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;   <span class="keywordflow">return</span> pi/2 + get_alpha_h() - get_beta();</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;}</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;<span class="comment"> * Returns \f$\Lambda_5\f$, Eq (14) arxiv:1607.06292</span></div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;<span class="comment"> * @return \f$\Lambda_5\f$</span></div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00471"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#a2542e63e94727a208198142b200cef80">  471</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_LambdaFive()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> tb = get_tan_beta();</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> sbcb = tb/(1.0 + <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(tb)); <span class="comment">// Sin[beta] Cos[beta]</span></div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;   <span class="keywordflow">return</span> 2*get_m122()/(get_v_sqr() * sbcb);</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;}</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;<span class="comment"></span> </div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;<span class="comment">/**</span></div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;<span class="comment"> * Returns \f$\left(\Lambda_{567} - \Lambda_{5}\right)\left(\tan\beta - \frac{1}{\tan\beta}\right) = \frac{\lambda_6}{\sin^2\beta} - \frac{\lambda_7}{\cos^2\beta}\f$</span></div>
+<div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00481"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#ade0fc2a2612bf850ca804040aae28e66">  481</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_LambdaSixSeven()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> sb = get_sin_beta();</div>
+<div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> cb = get_cos_beta();</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;   <span class="keywordflow">return</span> lambda6/<a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(sb) - lambda7/<a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(cb);</div>
+<div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;}</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160; </div>
+<div class="line"><a name="l00488"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#a38814401a67cb2c1f160f5aeb0d7382f">  488</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::ThetaW()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;   <span class="keywordflow">return</span> std::atan(gut_normalization*g1/g2);</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;}</div>
+<div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160; </div>
+<div class="line"><a name="l00493"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#aea8cb5ec9d0f81e671d760106735c1a4">  493</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_v()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;   <span class="keywordflow">return</span> std::sqrt(get_v_sqr());</div>
+<div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;}</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160; </div>
+<div class="line"><a name="l00498"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#aa57756361a4e25351f83e5cbc151077a">  498</a></span>&#160;<span class="keywordtype">double</span> CLASSNAME::get_v_sqr()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;<span class="keyword"></span>{</div>
+<div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;   <span class="keywordflow">return</span> <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(v1) + <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(v2);</div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;}</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160; </div>
+<div class="line"><a name="l00503"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#ace2149b0c683994a95be6daacab3b01c">  503</a></span>&#160;<span class="keywordtype">void</span> CLASSNAME::set_alpha_em_and_cw(<span class="keywordtype">double</span> alpha_em, <span class="keywordtype">double</span> cw)</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;{</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> e = std::sqrt(alpha_em*4*pi);</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> sw = std::sqrt(1 - <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(cw));</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;   g1 = e/(cw*gut_normalization);</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;   g2 = e/sw;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;}</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160; </div>
+<div class="line"><a name="l00511"></a><span class="lineno"><a class="line" href="classgm2calc_1_1THDM__mass__eigenstates.html#adf2cd22d406e36101ec8008cd9c488fd">  511</a></span>&#160;<span class="keywordtype">void</span> CLASSNAME::set_tan_beta_and_v(<span class="keywordtype">double</span> tan_beta, <span class="keywordtype">double</span> <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>)</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;{</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> sq = std::sqrt(1.0 + <a class="code" href="namespacegm2calc.html#a0f1ab9b2be56d7dd563467ae206e78e9">sqr</a>(tan_beta));</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> sb = tan_beta/sq;</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;   <span class="keyword">const</span> <span class="keywordtype">double</span> cb = 1/sq;</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;   v1 = <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>*cb;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;   v2 = <a class="code" href="gm2__slha__io_8cpp.html#a3b90d5a73541ab9402511d87bed076ef">v</a>*sb;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;}</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160; </div>
+<div class="line"><a name="l00520"></a><span class="lineno"><a class="line" href="namespacegm2calc.html#a760856ffaaf7fc7f2f080984ee71f0f6">  520</a></span>&#160;std::ostream&amp; <a class="code" href="namespacegm2calc.html#a8342a1b17519dbce763b063b20bb9b6c">operator&lt;&lt;</a>(std::ostream&amp; ostr, <span class="keyword">const</span> <a class="code" href="THDM__mass__eigenstates_8cpp.html#a36470daa77917be305561b8ff59f571a">CLASSNAME</a>&amp; model)</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;{</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;   model.print(ostr);</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;   <span class="keywordflow">return</span> ostr;</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;}</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160; </div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;} <span class="comment">// namespace gm2calc</span></div>
 <div class="ttc" id="aTHDM__mass__eigenstates_8cpp_html_a36470daa77917be305561b8ff59f571a"><div class="ttname"><a href="THDM__mass__eigenstates_8cpp.html#a36470daa77917be305561b8ff59f571a">CLASSNAME</a></div><div class="ttdeci">#define CLASSNAME</div><div class="ttdef"><b>Definition:</b> <a href="THDM__mass__eigenstates_8cpp_source.html#l00050">THDM_mass_eigenstates.cpp:50</a></div></div>
 <div class="ttc" id="aTHDM__mass__eigenstates_8hpp_html"><div class="ttname"><a href="THDM__mass__eigenstates_8hpp.html">THDM_mass_eigenstates.hpp</a></div><div class="ttdoc">contains class for general THDM model with routines needed to solve EWSB and determine the masses and...</div></div>
 <div class="ttc" id="aclassgm2calc_1_1THDM__parameters_html_adc5c8c1806612d30771782253e5b3610"><div class="ttname"><a href="classgm2calc_1_1THDM__parameters.html#adc5c8c1806612d30771782253e5b3610">gm2calc::THDM_parameters::print</a></div><div class="ttdeci">void print(std::ostream &amp;) const</div><div class="ttdef"><b>Definition:</b> <a href="THDM__parameters_8cpp_source.html#l00025">THDM_parameters.cpp:25</a></div></div>
@@ -615,7 +616,7 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Mar 8 2022 18:50:49 for GM2Calc by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
+Generated on Fri Mar 18 2022 23:11:26 for GM2Calc by&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.9.1
 </small></address>
 </body>
 </html>
