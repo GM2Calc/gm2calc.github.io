@@ -1,3 +1,6 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$structgm2calc_1_1MSSMNoFV__onshell__problems_1_1Convergence__problem.html" title=" " alt="" coords="5,5,220,61"/>
+<area shape="rect" id="node1" href="$classgm2calc_1_1MSSMNoFV__onshell__susy__parameters.html" title="contains SUSY parameters of the MSSMNoFV model" alt="" coords="5,5,220,47"/>
+<area shape="rect" id="node2" href="$classgm2calc_1_1MSSMNoFV__onshell__soft__parameters.html" title="contains soft&#45;breaking parameters of the MSSMNoFV model" alt="" coords="268,5,483,47"/>
+<area shape="rect" id="node3" href="$classgm2calc_1_1MSSMNoFV__onshell__mass__eigenstates.html" title="model class with routines determine masses, mixings and EWSB" alt="" coords="531,5,745,47"/>
+<area shape="rect" id="node4" href="$classgm2calc_1_1MSSMNoFV__onshell.html" title="contains the MSSMNoFV parameters in the on&#45;shell scheme" alt="" coords="793,13,1008,39"/>
 </map>
