@@ -1,0 +1,101 @@
+\_form#0=13x10:$a_\mu$
+\_form#1=34x14:$\operatorname{Li}_2(x)$
+\_form#2=34x14:$\mathrm{Li}_2(z)$
+\_form#3=115x15:$\mathrm{Cl}_2(\theta) = \mathrm{Im}(\mathrm{Li}_2(e^{i\theta}))$
+\_form#4=33x14:$\mathrm{Cl}_2(\theta)$
+\_form#5=36x14:$f_{PS}(z)$
+\_form#6=29x14:$f_S(z)$
+\_form#7=28x16:$f_{\tilde{f}}(z)$
+\_form#8=33x14:$\mathcal{F}_1(\omega)$
+\_form#9=33x16:$\tilde{\mathcal{F}}_1(\omega)$
+\_form#10=33x14:$\mathcal{F}_2(\omega)$
+\_form#11=33x14:$\mathcal{F}_3(\omega)$
+\_form#12=241x15:$\lambda^2(x,y,z) = x^2 + y^2 + z^2 - 2xy - 2yz - 2xz$
+\_form#13=53x15:$\lambda^2(x,y,z)$
+\_form#14=49x14:$\Phi(x,y,z)$
+\_form#15=34x15:$F_1^C(x)$
+\_form#16=34x15:$F_2^C(x)$
+\_form#17=34x15:$F_3^C(x)$
+\_form#18=34x15:$F_4^C(x)$
+\_form#19=35x15:$F_1^N(x)$
+\_form#20=35x15:$F_2^N(x)$
+\_form#21=35x15:$F_3^N(x)$
+\_form#22=35x15:$F_4^N(x)$
+\_form#23=30x14:$F_a(x)$
+\_form#24=29x14:$F_b(x)$
+\_form#25=31x14:$G_3(x)$
+\_form#26=31x14:$G_4(x)$
+\_form#27=59x14:$I_{abc}(a,b,c)$
+\_form#28=39x18:$f_l^{H^\pm}(z)$
+\_form#29=91x18:$\mathcal{F}_d^{H^\pm}(x,y,q_u,q_d)$
+\_form#30=91x18:$\mathcal{F}_u^{H^\pm}(x,y,q_u,q_d)$
+\_form#31=51x16:$\tilde{F}_{FZ}(x,y)$
+\_form#32=51x14:$F_{FZ}(x,y)$
+\_form#33=55x15:$F_{CW}^l(x,y)$
+\_form#34=138x14:$F_{CW}^u(x_u,x_d,y_u,y_d,q_u,q_d)$
+\_form#35=138x15:$F_{CW}^d(x_u,x_d,y_u,y_d,q_u,q_d)$
+\_form#36=53x15:$\lambda^2(x, y, z)$
+\_form#37=33x14:$\alpha_s(Q)$
+\_form#38=10x13:$Q$
+\_form#39=31x14:$\Lambda_{\text{QCD}}$
+\_form#40=29x14:$F_b(\mu)$
+\_form#41=9x9:$\mu$
+\_form#42=70x23:$y_\mu =
+\frac{\sqrt{2} m_\mu^\text{pole}}{v_d}$
+\_form#43=20x19:$n^L_{i\tilde{l}_k}$
+\_form#44=28x13:$l=\mu$
+\_form#45=20x19:$n^R_{i\tilde{l}_k}$
+\_form#46=19x18:$c^L_{i\tilde{\nu}_\mu}$
+\_form#47=19x18:$c^R_{i\tilde{\nu}_\mu}$
+\_form#48=126x18:$\mathcal{A}^{c+}_{ii\tilde{\nu}_\mu} =
+|c^L_{i\tilde{\nu}_\mu}|^2 + |c^R_{i\tilde{\nu}_\mu}|^2$
+\_form#49=76x15:$|c^L_{im}|^2 + |c^R_{im}|^2$
+\_form#50=141x18:$\mathcal{A}^{n+}_{ii\tilde{\mu}_m} =
+|n^L_{i\tilde{\mu}_m}|^2 + |n^R_{i\tilde{\mu}_m}|^2$
+\_form#51=80x15:$|n^L_{im}|^2 + |n^R_{im}|^2$
+\_form#52=128x18:$\mathcal{B}^{c+}_{ii\tilde{\nu}_\mu} = 2 \text{Re}
+[(c^L_{i\tilde{\nu}_\mu})^* c^R_{i\tilde{\nu}_\mu}]$
+\_form#53=143x18:$\mathcal{B}^{n+}_{ii\tilde{\mu}_m} = 2 \text{Re}
+[(n^L_{i\tilde{\mu}_m})^* n^R_{i\tilde{\mu}_m}]$
+\_form#54=91x19:$x_{im} = m^2_{\chi_i^0} / m^2_{\tilde{\mu}_m}$
+\_form#55=84x20:$x_k = m^2_{\chi_k^\pm} / m^2_{\tilde{\nu}_\mu}$
+\_form#56=29x19:$\frac{1}{1 + \Delta_{\mu}}$
+\_form#57=15x13:$\Delta_{\ell}$
+\_form#58=16x14:$\Delta_{\mu}$
+\_form#59=16x13:$\Delta_{\tau}$
+\_form#60=15x13:$\Delta_b$
+\_form#61=41x9:$m_{SUSY}$
+\_form#62=19x14:$\Delta_{g_1}$
+\_form#63=19x14:$\Delta_{\tilde{H}}$
+\_form#64=28x14:$\Delta_{\tilde{B}\tilde{H}}$
+\_form#65=19x14:$\Delta_{g_2}$
+\_form#66=30x14:$\Delta_{\tilde{W}\tilde{H}}$
+\_form#67=19x15:$\Delta_{t_\beta}$
+\_form#68=29x9:$\tan\alpha$
+\_form#69=13x14:$\lambda_{\mu}$
+\_form#70=19x18:$\lambda_{\chi_k^+}$
+\_form#71=19x18:$\lambda_{\chi_1^+}$
+\_form#72=19x18:$\lambda_{\chi_2^+}$
+\_form#73=14x15:$\lambda_{\tilde{t}_i}$
+\_form#74=15x15:$\lambda_{\tilde{b}_i}$
+\_form#75=15x14:$\lambda_{\tilde{\tau}_i}$
+\_form#76=35x16:$(\tilde{f}\gamma H)$
+\_form#77=35x14:$(\chi\gamma H)$
+\_form#78=83x18:$Y_l^{H^\pm} = \sqrt{2}\; Y_l^A$
+\_form#79=33x15:$(Y_l^A)^2$
+\_form#80=41x18:$(Y_l^{H^\pm})^2$
+\_form#81=18x10:$\Delta\alpha$
+\_form#82=134x15:$\alpha^{\text{THDM}} = \alpha^{\text{SM}}/(1 - \Delta\alpha)$
+\_form#83=43x16:$a_\mu^{\Delta r\text{-shift}}$
+\_form#84=36x16:$O(m_\mu^4)$
+\_form#85=36x16:$O(m_\mu^2)$
+\_form#86=9x13:$\beta$
+\_form#87=68x14:$0 \leq \beta \leq \pi/2$
+\_form#88=14x9:$\alpha_h$
+\_form#89=120x14:$-\pi/2 \leq \beta - \alpha_h \leq \pi/2$
+\_form#90=8x9:$\eta$
+\_form#91=90x14:$\beta - \alpha = \pi/2 - \eta$
+\_form#92=15x13:$\Lambda_5$
+\_form#93=236x24:$\left(\Lambda_{567} - \Lambda_{5}\right)\left(\tan\beta - \frac{1}{\tan\beta}\right) = \frac{\lambda_6}{\sin^2\beta} - \frac{\lambda_7}{\cos^2\beta}$
+\_form#94=50x14:$\alpha_{\text{em}}(M_Z)$
+\_form#95=36x14:$\alpha_{\text{em}}(0)$

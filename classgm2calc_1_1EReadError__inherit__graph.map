@@ -1,5 +1,7 @@
 <map id="gm2calc::EReadError" name="gm2calc::EReadError">
-<area shape="rect" id="node1" title=" " alt="" coords="5,271,163,363"/>
-<area shape="rect" id="node2" href="$classgm2calc_1_1Error.html" title=" " alt="" coords="26,131,142,223"/>
-<area shape="rect" id="node3" title=" " alt="" coords="15,5,153,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="5,252,144,337"/>
+<area shape="rect" id="Node000002" href="$classgm2calc_1_1Error.html" title=" " alt="" coords="25,119,124,204"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="77,218,77,252,72,252,72,218"/>
+<area shape="rect" id="Node000003" title=" " alt="" coords="17,5,133,71"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="77,85,77,119,72,119,72,85"/>
 </map>

@@ -1,6 +1,9 @@
 <map id="gm2calc::MSSMNoFV_onshell" name="gm2calc::MSSMNoFV_onshell">
-<area shape="rect" id="node1" title="contains the MSSMNoFV parameters in the on&#45;shell scheme" alt="" coords="7,1247,222,1471"/>
-<area shape="rect" id="node2" href="$classgm2calc_1_1MSSMNoFV__onshell__mass__eigenstates.html" title="model class with routines determine masses, mixings and EWSB" alt="" coords="5,931,224,1199"/>
-<area shape="rect" id="node3" href="$classgm2calc_1_1MSSMNoFV__onshell__soft__parameters.html" title="contains soft&#45;breaking parameters of the MSSMNoFV model" alt="" coords="7,439,222,883"/>
-<area shape="rect" id="node4" href="$classgm2calc_1_1MSSMNoFV__onshell__susy__parameters.html" title="contains SUSY parameters of the MSSMNoFV model" alt="" coords="7,5,222,391"/>
+<area shape="rect" id="Node000001" title="contains the MSSMNoFV parameters in the on&#45;shell scheme" alt="" coords="6,1488,199,1753"/>
+<area shape="rect" id="Node000002" href="$classgm2calc_1_1MSSMNoFV__onshell__mass__eigenstates.html" title="model class with routines determine masses, mixings and EWSB" alt="" coords="5,1131,200,1440"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="105,1454,105,1488,100,1488,100,1454"/>
+<area shape="rect" id="Node000003" href="$classgm2calc_1_1MSSMNoFV__onshell__soft__parameters.html" title="contains soft&#45;breaking parameters of the MSSMNoFV model" alt="" coords="6,528,199,1083"/>
+<area shape="poly" id="edge2_Node000002_Node000003" title=" " alt="" coords="105,1096,105,1130,100,1130,100,1096"/>
+<area shape="rect" id="Node000004" href="$classgm2calc_1_1MSSMNoFV__onshell__susy__parameters.html" title="contains SUSY parameters of the MSSMNoFV model" alt="" coords="6,5,199,480"/>
+<area shape="poly" id="edge3_Node000003_Node000004" title=" " alt="" coords="105,494,105,528,100,528,100,494"/>
 </map>

@@ -1,8 +1,13 @@
 <map id="gm2calc::Error" name="gm2calc::Error">
-<area shape="rect" id="node1" title=" " alt="" coords="345,131,461,223"/>
-<area shape="rect" id="node3" href="$classgm2calc_1_1EInvalidInput.html" title=" " alt="" coords="5,271,176,363"/>
-<area shape="rect" id="node4" href="$classgm2calc_1_1EPhysicalProblem.html" title=" " alt="" coords="201,271,402,363"/>
-<area shape="rect" id="node5" href="$classgm2calc_1_1EReadError.html" title=" " alt="" coords="427,271,584,363"/>
-<area shape="rect" id="node6" href="$classgm2calc_1_1ESetupError.html" title="Spectrum generator was not setup correctly." alt="" coords="609,271,770,363"/>
-<area shape="rect" id="node2" title=" " alt="" coords="333,5,472,83"/>
+<area shape="rect" id="Node000001" title=" " alt="" coords="307,119,405,204"/>
+<area shape="rect" id="Node000003" href="$classgm2calc_1_1EInvalidInput.html" title=" " alt="" coords="5,252,152,337"/>
+<area shape="poly" id="edge2_Node000001_Node000003" title=" " alt="" coords="295,194,165,254,153,260,151,255,163,250,293,189"/>
+<area shape="rect" id="Node000004" href="$classgm2calc_1_1EPhysicalProblem.html" title=" " alt="" coords="176,252,355,337"/>
+<area shape="poly" id="edge3_Node000001_Node000004" title=" " alt="" coords="322,217,296,253,292,250,317,213"/>
+<area shape="rect" id="Node000005" href="$classgm2calc_1_1EReadError.html" title=" " alt="" coords="379,252,517,337"/>
+<area shape="poly" id="edge4_Node000001_Node000005" title=" " alt="" coords="395,213,421,250,417,253,391,217"/>
+<area shape="rect" id="Node000006" href="$classgm2calc_1_1ESetupError.html" title="Spectrum generator was not setup correctly." alt="" coords="542,252,685,337"/>
+<area shape="poly" id="edge5_Node000001_Node000006" title=" " alt="" coords="419,192,543,255,541,259,417,196"/>
+<area shape="rect" id="Node000002" title=" " alt="" coords="298,5,414,71"/>
+<area shape="poly" id="edge1_Node000001_Node000002" title=" " alt="" coords="359,85,359,119,353,119,353,85"/>
 </map>

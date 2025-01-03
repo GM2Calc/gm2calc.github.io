@@ -1,8 +1,0 @@
-<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,81,144,108"/>
-<area shape="rect" id="node2" href="$classgm2calc_1_1Error.html" title=" " alt="" coords="192,81,308,108"/>
-<area shape="rect" id="node3" href="$classgm2calc_1_1EInvalidInput.html" title=" " alt="" coords="371,5,542,32"/>
-<area shape="rect" id="node4" href="$classgm2calc_1_1EPhysicalProblem.html" title=" " alt="" coords="356,56,557,83"/>
-<area shape="rect" id="node5" href="$classgm2calc_1_1EReadError.html" title=" " alt="" coords="378,107,535,133"/>
-<area shape="rect" id="node6" href="$classgm2calc_1_1ESetupError.html" title="Spectrum generator was not setup correctly." alt="" coords="376,157,537,184"/>
-</map>
